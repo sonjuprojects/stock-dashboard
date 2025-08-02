@@ -9,7 +9,7 @@ const StockDashboardWithChart = () => {
   const [error, setError] = useState('');
 
   const API_URL = 'https://stock.indianapi.in/stock';
-  const API_KEY = 'sk-live-lPs12yyR38seViJVj31rACsMI2qqgwv2jSIBRC9L'; // replace with your API key
+  const API_KEY = process.env.REACT_APP_API_KEY; // replace with your API key
 
   const fetchStockData = async () => {
     if (!symbol) return;
