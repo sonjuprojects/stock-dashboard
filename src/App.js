@@ -1,25 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+{stockData.companyProfile?.peerCompanyList?.length > 0 && (
+  <div className="mb-6">
+    <div className="flex justify-between items-center mb-2">
+      <h2 className="text-lg font-semibold">👥 Peer Comparison</h2>
+      <button
+        onClick={exportPeersToCSV}
+        className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm"
+      >
+        ⬇️ Export CSV
+      </button>
     </div>
-  );
-}
-
-export default App;
